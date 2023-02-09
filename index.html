@@ -8,7 +8,8 @@
 <body>
 <div style="display:flex;justify-content: center;align-items: center; height:100%">
 <button type="button" class="btn btn-primary" onclick="play();">오잉</button>
-<audio src="./wake-up.MP3">
+<audio controls id="wakeup" style="display:none;">
+    <source src="./wake-up.MP3" type="audio/mp3">
 </audio>
 </div>
 
@@ -17,13 +18,9 @@
 
 <script>
 function play(){
-	for(i=0; i<200000; i++){
-		if(i=1){
-			document.getElementById('wake-up').click();
-		}
-		alert('일어나')
-		
-	}
+
+			document.getElementById("wakeup").play()
+
 }
 </script>
 </html>
